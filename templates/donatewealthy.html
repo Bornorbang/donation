@@ -1,0 +1,85 @@
+{% extends 'main.html'%}
+
+
+{% block maincontent%}
+
+<div class="banner mb-5 row position-relative">
+    <div class="col-12">
+        <img src="https://ummetvakfi.org/upload/arsiv/slayt-wepsite-FADZSVTFHHTCKIDY66XU.jpg" class="img-fluid w-100" alt="Banner Image">
+    </div>
+    <a href="{% url 'projects' %}" class="btn btn-primary border-0 p-3 position-absolute start-50" style="bottom: -20px; width: 150px;">
+        <i class="fas fa-donate"></i> Donate Now
+    </a>
+</div>
+
+<div class="main-section mb-5">
+    <div class="container">
+        <p class="fw-bold text-center mb-5">DONATE FOR THE WEALTHY</p>
+
+        <p class="mb-5">As described in the Holy Quran, “al-Masjid al- Aqsa, whose surroundings We have blessed”, (Surah Al-Isra:1),
+            and as the Messenger of Allah had said, “It is the second masjid decreed to be built by Allah”, (Bukhari and Muslim). </p>
+
+        <p class="mb-5">The virtuous days have begun and as a reminder of what the Prophet, peace, and blessings be upon him, said: (The days of righteous deeds are unparalleled 
+            in God's love). Hence, we launch with you DONATE FOR THE WEALTHY campaign that seeks to support and consolidate the 
+            steadfastness of Jerusalemites in their homes and land despite the pressures, harassment, and serious temptations they are facing.</p>
+
+        <p class="mb-5">Is it a dilapidated house in Jerusalem or a palace outside its walls? Despite offers of millions of dollars, they refused to give up their homes in Al-Quds 
+            city. Despite their steadfastness in the face of all attempts to displace them, Jerusalemites are constantly addressed in this way. 
+            Assist them in persevering despite temptations, rebuilding their homes, and supporting their steadfastness.</p>
+
+        <p class="mb-5">The Holy City's residents, however, are constrained in every aspect of their life and livelihood because plans are being hatched to force them to relocate.</p>
+        <p class="fw-bold mb-5">There is either going out and getting rich and leaving their houses after being offered large sums of money <span class="text-danger">OR</span> staying in poverty.</p> 
+
+        <p class="fw-bold mb-5 text-danger">Donating to this project will result in long-term benefits. </p>
+
+        <p class="fw-bold mb-5">There are a number of projects included in the campaign which are :</p>
+
+        <p class="mb-5">Houses renovation in the old city project and supporting debtors, along with seasonal projects such as Eid al-Adha and sacrifices (Qurbani) 
+            in and outside of Al-Quds.</p>
+
+        <p class="fw-bold mb-5 p-text">Regardless of whether you visit al-Quds, your deeds will bear witness to your presence! </p>
+        <h3 class="text-danger text-center mb-5">You can donate as little as $1</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for project in page_obj %}
+            <div class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="{{project.image}}" alt="Background Image 1">
+                    <div class="overlay">
+                        <h5 class="card-title">{{project.title}}</h5>
+                        <!-- <a href="#" class="btn btn-primary border-0 p-3" data-bs-toggle="modal" data-bs-target="#donateModal"><i class="fas fa-donate"></i> Donate Now</a> -->
+                        <a href="{% url 'donate' project.id %}" class="btn btn-primary border-0 p-3"><i class="fas fa-donate"></i> Donate Now</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="pagination">
+            <span>
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+            <div>
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}" class="pagination-link">Previous</a>
+                {% endif %}
+                
+                {% for num in page_obj.paginator.page_range %}
+                    {% if page_obj.number == num %}
+                        <strong class="current-page">{{ num }}</strong>
+                    {% elif num > page_obj.number|add:-2 and num < page_obj.number|add:2 %}
+                        <a href="?page={{ num }}" class="pagination-link">{{ num }}</a>
+                    {% endif %}
+                {% endfor %}
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" class="pagination-link">Next</a>
+                {% endif %}
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

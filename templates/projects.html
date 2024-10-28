@@ -1,0 +1,45 @@
+{% extends "main.html" %}
+
+{% block maincontent %}
+<div class="container mt-5 mb-5">
+      <div class="row">
+          <!-- Card 1 -->
+          {% for project in projects %}
+            <div class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="{{project.image}}" alt="Background Image 1">
+                    <div class="overlay">
+                        <h5 class="card-title">{{project.title}}</h5>
+                        {% comment %} <a href="#" class="btn btn-primary border-0 p-3" data-bs-toggle="modal" data-bs-target="#donateModal"><i class="fas fa-donate"></i> Donate Now</a> {% endcomment %}
+                        <a href="{% url 'donate' project.id %}" class="btn btn-primary border-0 p-3"><i class="fas fa-donate"></i> Donate Now</a>
+                    </div>
+                </div>
+            </div>
+          {% endfor %}
+  
+          {% comment %} <!-- Card 2 -->
+          <div class="col-md-4 mt-2">
+              <div class="card">
+                  <img src="https://ummetvakfi.org/upload/arsiv/opt-3-QQEA8HUTZLUC6US8EY9P.png" alt="Background Image 2">
+                  <div class="overlay">
+                      <h5 class="card-title">Houses Reconstruction</h5>
+                      <a href="#" class="btn btn-primary border-0 p-3"><i class="fas fa-donate"></i> Donate Now</a>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Card 3 -->
+          <div class="col-md-4 mt-2">
+              <div class="card">
+                  <img src="https://ummetvakfi.org/upload/arsiv/opt-Blue-and-White-Quotes-Facebook-Post-40241-GDESJZH40KV8F2J44IR4.png" alt="Background Image 3">
+                  <div class="overlay">
+                      <h5 class="card-title">Give Your Zakat to Al-Quds</h5>
+                      <a href="#" class="btn btn-primary border-0 p-3"><i class="fas fa-donate"></i> Donate Now</a>
+                  </div>
+              </div>
+          </div> {% endcomment %}
+      </div>
+  </div>
+
+ 
+{% endblock %}

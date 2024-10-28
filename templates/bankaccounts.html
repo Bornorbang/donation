@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block maincontent%}
+
+<div class="container my-5">
+    <div class="bank-head d-flex justify-content-between align-items-center p-3 rounded">
+        <h4 class="display-7 fw-bold text-white m-0 text-decoration-underline ps-lg-5">
+            To Complete Your Donation, Click Here
+        </h3>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png" width="80px" alt="Stripe Logo">
+        </div>
+    </div>
+
+</div>
+
+<div class="container my-4">
+
+    <div class="d-flex justify-content-between align-items-center above-table bg-light py-3 px-2">
+        <h5>ZİRAAT KATILIM BANKASI</h5>
+        <img src="https://ummetvakfi.org/upload/arsiv/opt-ZiraatKatilim_logo-P882MY6WYF0QWVIM71C6.png" alt="" width="150px">
+    </div>
+
+    <table class="table table-bordered table-striped custom-table">
+        <thead class="table-light">
+            <tr>
+                <th>DÖVİZ</th>
+                <th>HESAP NO</th>
+                <th>IBAN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="fw-bold">TL</td>
+                <td> 18-15385-1</td>
+                <td>TR13 0020 9000 0001 5385 0000 01</td>
+            </tr>
+            <tr>
+                <td class="fw-bold">USD</td>
+                <td>18-15385-3</td>
+                <td>TR56 0020 9000 0001 5385 0000 03</td>
+            </tr>
+            <tr>
+                <td class="fw-bold">EUR</td>
+                <td>18-15385-2</td>
+                <td> TR83 0020 9000 0001 5385 0000 02</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock%}

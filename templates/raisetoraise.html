@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block maincontent%}
+
+    <div class="banner position-relative">
+        <div class="row">
+            <div class="col">
+                <img src="https://ummetvakfi.org/upload/arsiv/slayt-temkiin_en-banner-QIUJYQIHQJFJ8FUHX6YQ.jpg" class="img-fluid w-100" alt="">
+            </div>
+        </div>
+        <a href="{% url 'projects' %}" class="btn btn-primary border-0 p-3 position-absolute start-50" style="bottom: -20px; width: 150px;"><i class="fas fa-donate"></i> Donate Now</a>
+    </div>
+
+    <div class="container my-5">
+        <p class=""mb-5>Due to educational restrictions and reduced attempts to build schools, as well as increasing taxes and bills on Jerusalemites, many families withdraw their children from school because they cannot afford the premiums, or children avoid school and go to the labor market. Because of the
+            difficult economic conditions in which they live, they thought they could help their parents.</p>
+        <p class="mb-5">Help us save the Jerusalem education sector and make the education process successful so that it plays its role in raising a generation that preserves its land and maintains its identity by 
+            supporting the four pillars of education: the student, the teacher, the school, and the curriculum.</p>
+        <p class="mb-5">This project has potential and impacts fully the mainstreaming of students of al-Quds and orphan children. Their basic needs are met and they will get new life through gaining knowledge, vocational skills, and life skills. They will get love 
+            and affection and their confidence level will increase and become good assets to the community.</p>
+        <p class="mb-5">They are developed physically and psychologically and made as good and productive citizens. 
+            They will inspire by philanthropy and show humanity towards the community.</p>
+        <p class="mb-5 bg-danger">The dropout rate of students in Jerusalem reached 43% and this has only been increasing.</p>
+        <p class="mb-5">Education is a strategic sector and an essential pillar in society, because of its direct correlation to the socioeconomic growth and prosperity of society.</p>
+        <p class="mb-5">Contribute and support <span class="p-text fw-bold">Ummet Waqf</span> in its transfer of the Jerusalem culture to raise 
+            a generation that preserves its land and identity by supporting the educational sector in its four pillars: </p>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="{{project.image}}" alt="Background Image 1">
+                    <div class="overlay">
+                        <h5 class="card-title">{{project.title}}</h5>
+                        <!-- <a href="#" class="btn btn-primary border-0 p-3" data-bs-toggle="modal" data-bs-target="#donateModal"><i class="fas fa-donate"></i> Donate Now</a> -->
+                        <a href="{% url 'donate' project.id %}" class="btn btn-primary border-0 p-3"><i class="fas fa-donate"></i> Donate Now</a>
+                    </div>
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

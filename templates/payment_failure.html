@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block maincontent%}
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="text-danger text-center">Donation Failed</h4>
+            </div>
+            <div class="card-body">
+                <p>Unfortunately, we couldn’t process your donation to {{ project.title }}. Please try again.</p>
+            </div>
+            <div class="card-footer text-center me-3">
+                <a href="{% url 'home' %}">Return to Home</a> |
+                <a href="{% url 'stripe_checkout' project_id=project.id donate_id=donate.id %}">Try Again</a>
+            </div>
+        </div>
+    </div>
+{% endblock%}

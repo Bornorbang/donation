@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block maincontent %}
+<div class="container my-5">
+    <div class="card p-5">
+        <h2 class="border-bottom pb-1 mb-4">Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary btn-lg border-0">Log In</button>
+        </form>
+        <p class="text-center mt-3">Haven't registered? <a href="{% url 'signup' %}" class="link">Create Account</a></p>
+    </div>
+</div>
+{% endblock %}

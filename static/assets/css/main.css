@@ -1,0 +1,379 @@
+* {
+  font-family: poppins, sans-serif;
+}
+
+p{
+    font-size: 20px;
+}
+.navbar{
+    background-color: #017275;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 40px; /* Add space between items */
+  }
+
+.navbar-nav .nav-item:last-child {
+margin-right: 0; /* Remove space from the last item */
+}
+
+/* Set text color to white */
+.navbar-nav .nav-link {
+color: white !important; /* Override default color and make sure it's applied */
+font-size: 17px;
+font-weight: 500;
+text-transform: uppercase;
+transition: color 0.3s ease; /* Smooth transition for hover effect */
+border: 1px solid transparent; /* Add border to all links */
+padding: 12px 100px; /* Add padding to links */
+}
+
+/* Set hover effect */
+.navbar-nav .nav-link:hover {
+background-color: #D2B117!important; /* Change color on hover */
+}
+
+@media (max-width: 767px) {
+    .navbar-brand img{
+        width: 90px;
+    }
+}
+
+@media (min-width: 767px) {
+    .navbar-brand img{
+        width: 90px;
+    }
+}
+
+.btn-primary{
+    background-color: #017275!important;
+    padding: 30px;
+    transition: all 0.3s ease!important;
+}
+
+.btn-primary:hover{
+    background-color: #D2B117!important;
+    border: none;
+    transform: scale(1.1)!important;
+}
+
+.hero {
+    height: 60vh;
+}
+
+.carousel-inner {
+    height: 80vh; /* Set the desired height for the hero section */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+    object-position: center; /* Center the image */
+}
+
+.carousel-indicators [data-bs-target] {
+    display: none!important; /* Hide the pagination indicators */
+}
+.hero p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hero h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    color: white; /* Set text color to white for better contrast */
+}
+
+.card img {
+    width: 100%; /* Make the image fill the card */
+    height:40vh; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    object-fit: cover;
+}
+
+.card img:hover {
+    transform: scale(1.1); /* Enlarge image on hover */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Cover half of the card */
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay h5{
+    color: white !important; /* Override default color and make sure it's applied */
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.card-title {
+    margin-bottom: 0.5rem; /* Space between title and button */
+}
+
+footer{
+    background-color: #242424;
+}
+
+footer img{
+    width: 150px;
+}
+
+footer p{
+    color: white!important; /* Override default color and make sure it's applied */
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+footer h3{
+    color: white !important; /* Override default color and make sure it's applied */
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.copyright{
+    background-color: #017275!important;
+}
+
+footer .socials i{
+    border: 1px solid transparent;
+    padding: 10px;
+    background-color: white;
+    border-radius: 48%;
+}
+
+footer .socials a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.partners h2{
+    text-align: center;
+}
+
+.partners img{
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+}
+
+.heading-with-lines {
+    display: inline-block;
+    position: relative;
+    font-size: 24px; /* Adjust as needed */
+    color: #333; /* Adjust as needed */
+  }
+  
+  .heading-with-lines::before,
+  .heading-with-lines::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%; /* Adjust line width */
+    height: 1px;
+    background-color: #eaeaea; /* Line color */
+  }
+  
+  .heading-with-lines::before {
+    left: -105%; /* Position line to the left */
+  }
+  
+  .heading-with-lines::after {
+    right: -105%; /* Position line to the right */
+  }
+
+
+.item-video {
+    position: relative;
+    height: 300px; /* Adjust height as necessary */
+}
+
+.item-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.owl-dots{
+    display: none;
+}
+
+/* .owl-dots.owl-dot{
+    display: inline-block;
+}
+
+.owl-dot span{
+    width: 11px;
+    height: 11px;
+    background: #333;
+    border-radius: 50%;
+    display: block;
+    margin: 5px 3px;
+}
+
+.owl-dot.active span{
+    background: #017275;
+} */
+
+
+.owl-prev, .owl-next{
+    background-color: #017275;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: #017275;
+}
+
+.p-text{
+    color: #017275;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.pagination span {
+    margin-right: 10px;
+}
+
+.pagination div {
+    display: flex;
+    gap: 5px; /* space between pagination links */
+}
+
+.pagination-link {
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #017275; /* Border color */
+    color: #017275; /* Text color */
+    background-color: white; /* Background color */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.pagination-link:hover {
+    background-color: #017275; /* Hover background color */
+    color: white; /* Hover text color */
+}
+
+.current-page {
+    padding: 8px 12px;
+    border: 1px solid #D2B117; /* Border color for current page */
+    color: #D2B117; /* Text color for current page */
+    background-color: white; /* Background color for current page */
+    border-radius: 4px; /* Rounded corners */
+    font-weight: bold; /* Bold text for current page */
+}
+
+.arrow-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+.arrow-list li {
+    position: relative;
+    padding-left: 15px; /* Add space for the arrow */
+    line-height: 2.82em; /* Adjust line height as needed */
+    margin-bottom: 10px; /* Add space between arrows */
+}
+
+.arrow-list a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.arrow-list li:hover{
+    background-color: #eaeaea; /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.arrow-list li::before {
+    content: ' >'; /* Unicode for the right arrow */
+    position: absolute;
+    font-size: 20px;
+    left: 0;
+    color: #333; /* Set the color you want for the arrow */
+}
+
+
+.before-arrow {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+.before-arrow li {
+    position: relative;
+    padding-left: 20px; /* Add space for the arrow */
+    line-height: 2.82em; /* Adjust line height as needed */
+    margin-top: 10px; /* Add space between arrows */
+    color: #8f8e8e;
+    font-size: 19px;
+}
+
+.before-arrow li:hover{
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.before-arrow li::before {
+    content: ' ▫'; /* Unicode for the right arrow */
+    position: absolute;
+    font-size: 50px;
+    left: 0;
+    color: #8f8e8e;
+    margin-right: 10px;
+}
+
+.bank-head{
+    border: 1px solid transparent;
+    background-color: #393660;
+}
+
+.bank-head:hover{
+    cursor: pointer;
+}
+.custom-table td{
+    height: 50px;
+}
+.custom-table th {
+    height: 60px; /* Adjust this value as needed */
+    vertical-align: middle; /* Centers content vertically */
+}
+
+.above-table{
+    border: 2px solid #eee;
+}
+
+.no-card-style .card img {
+    /* Reset or change styles here if needed */
+    all: unset; /* Clears inherited styles */
+}

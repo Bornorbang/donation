@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block maincontent %}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 col-lg-2">
+            <ul class="before-arrow">
+                <li class="bg-light">CORPORATE</li>
+            </ul>
+            <ul class="arrow-list">
+                <a href="{% url 'aboutus' %}"><li class="border-bottom">About us</li></a>
+                <a href="{% url 'bankaccounts' %}"><li class="border-bottom">Bank Accounts</li></a>
+            </ul>
+        </div>
+        <div class="col-12 col-lg-10">
+            <p class="display-7 text-center p-text mt-3">About Us:</p>
+            <p>Ummet waqf is an independent developmental Turkish association, aims to improve Al-Quds citizens abilities, to preserve their heritage and identity, and to revive their culture, through strategic allocation of his needs and priorities. 
+                Seeking to find the best and proper methods in order to maximize the impact and benefit of the available fund resources.</p>
+            <p class="display-7 text-center p-text mt-3">Our Message:</p>
+            <p>Ummet waqf is hardly working to gather all Muslim communities and activate their role in supporting and serving Al-Quds and Al-Aqsa Mosque. We at Ummet waqf consider ourselves as an endowment for all efforts done toward Al-Aqsa Mosque. Doing our best in accordance with scientific principles and assiduous. Exerting efficiency and proficiency in order to maximize the yields in conformity with the concepts of sustainability and precaution. 
+                Therefore, the resulting yields could be used in the most prioritized needs of Al-Quds citizens.</p>
+            <p class="display-7 text-center p-text mt-3">Our Vision:</p>
+            <p>Ummet waqf is aiming to be the leading endowment that gather all divisions of Muslims communities' 
+                efforts in favor of supporting Al-Quds and Al-Aqsa Mosque and to enhance Al-Quds citizens' resistance and solidity.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
