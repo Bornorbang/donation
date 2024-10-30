@@ -8,11 +8,16 @@
     <div class="card mx-0 mx-lg-5 p-3">
         <h3 class="my-3 text-center p-text">Donate to {{ project.title }}</h3>
         <p class="mt-2 mb-5 fw-bold text-center">Amount: ${{ donate.amount }}</p>
-        <div class="d-flex justify-content-center align-items-center">
-            {{ paypal.render }}
-            <a href="{% url 'stripe_checkout' project_id=project.id donate_id=donate.id %}">
-                <img src="{% static 'assets/img/cardbutton.png' %}" alt="Donate Button" class="img-fluid">
-            </a>
+        <div class="row mx-auto text-center">
+            <div class="col-12 col-md-6">
+                {{ paypal.render }}
+            </div>
+            
+            <div class="col-12 col-md-6">
+                <a href="{% url 'stripe_checkout' project_id=project.id donate_id=donate.id %}">
+                    <img src="{% static 'assets/img/cardbutton.png' %}" alt="Donate Button" class="img-fluid">
+                </a>
+            </div>
         </div>
     </div>
 </div>

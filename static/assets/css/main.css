@@ -2,6 +2,10 @@
   font-family: poppins, sans-serif;
 }
 
+body {
+    overflow-x: hidden; /* Prevents horizontal scroll but allows vertical */
+}
+
 p{
     font-size: 20px;
 }
@@ -51,19 +55,29 @@ background-color: #D2B117!important; /* Change color on hover */
     transition: all 0.3s ease!important;
 }
 
+@media (max-width: 767px) {
+    .btn-primary{
+        padding: 10px;
+    }
+}
+
 .btn-primary:hover{
     background-color: #D2B117!important;
     border: none;
     transform: scale(1.1)!important;
 }
 
-.hero {
-    height: 60vh;
-}
 
 .carousel-inner {
-    height: 80vh; /* Set the desired height for the hero section */
+    height: 80vh;
 }
+
+@media (max-width: 767px) {
+    .carousel-inner{
+        height: auto
+    }
+}
+
 
 .hero-image {
     width: 100%;
@@ -74,15 +88,6 @@ background-color: #D2B117!important; /* Change color on hover */
 
 .carousel-indicators [data-bs-target] {
     display: none!important; /* Hide the pagination indicators */
-}
-.hero p{
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.hero h1{
-    font-size: 50px;
-    font-weight: 700;
 }
 
 .card {
