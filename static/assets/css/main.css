@@ -68,8 +68,10 @@ background-color: #D2B117!important; /* Change color on hover */
 }
 
 
-.carousel-inner {
-    height: 80vh;
+@media (min-width: 767px) {
+    .carousel-inner {
+        height: 80vh;
+    }
 }
 
 @media (max-width: 767px) {
